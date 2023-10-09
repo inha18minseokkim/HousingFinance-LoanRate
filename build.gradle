@@ -17,9 +17,26 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'mysql:mysql-connector-java:8.0.26'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'io.netty:netty-resolver-dns-native-macos:4.1.68.Final:osx-aarch_64'
+
+
     testImplementation 'io.projectreactor:reactor-test'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'com.h2database:h2:1.4.200'
+    testImplementation 'org.springframework.batch:spring-batch-test'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor(
+            'org.projectlombok:lombok-mapstruct-binding:0.1.0',
+            'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    )
 }
 
 tasks.named('test') {
