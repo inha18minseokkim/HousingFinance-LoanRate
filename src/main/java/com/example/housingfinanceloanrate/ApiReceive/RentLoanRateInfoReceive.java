@@ -15,8 +15,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Service
 @Slf4j
 public class RentLoanRateInfoReceive {
-    //@Value("${dataPortal.secret}")
-    private String dataPortalSecret = "Rujw%2BIsa8li%2Ba%2FgKuQ2M5xnXH9wNS8evvDQnU1h%2BpRTcm%2BQpzUcAMi7woS1urDmsbRycaM0%2FcBhToF1ut2BQyw%3D%3D";
+    @Value("${dataPortal.secret}")
+    private String dataPortalSecret;
     private static final String ENDPOINTURL = "https://apis.data.go.kr/B551408/rent-loan-rate-info/rate-list";
     public RentLoanRateInfoResponse apiReceive() {
         UriComponents uriComponents = UriComponentsBuilder.fromHttpUrl(ENDPOINTURL)
