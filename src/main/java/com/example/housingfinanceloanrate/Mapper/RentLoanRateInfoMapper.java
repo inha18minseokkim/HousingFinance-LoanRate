@@ -12,7 +12,6 @@ import org.mapstruct.*;
 )
 public interface RentLoanRateInfoMapper {
     public default Double parseDouble(String target){
-        System.out.println("Mapping");
         try{
             return Double.parseDouble(target);
         }catch (NumberFormatException e){
