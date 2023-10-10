@@ -44,7 +44,6 @@ public class DatabaseConfigUtils {
 
     static Properties jpaProperties() {
         Properties properties = new Properties();
-        System.out.println("@@@@@@@@@@@@@@@");
         properties.setProperty("hibernate.show_sql", "true");
         properties.setProperty("hibernate.format_sql", "false");
         properties.setProperty("hibernate.use_sql_comments", "false");
@@ -64,7 +63,7 @@ public class DatabaseConfigUtils {
 
         //properties.setProperty("spring.batch.jdbc.initialize-schema", "always");
         //properties.setProperty("spring.batch.initialize-schema", "always");
-        //properties.setProperty("spring.jpa.hibernate.ddl-auto", "create");
+        properties.setProperty("spring.jpa.hibernate.ddl-auto", "create");
 
         properties.setProperty("spring.jpa.hibernate.jdbc.batch_versioned_data", "true");
         properties.setProperty("spring.jpa.properties.hibernate.jdbc.batch_size", "5000");
